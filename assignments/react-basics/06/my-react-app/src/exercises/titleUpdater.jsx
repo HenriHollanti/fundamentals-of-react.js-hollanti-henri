@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const TitleUpdater = () => {
-  // useState + useEffect to update document.title
-
-  const [count, setCount] = useState(0);
+  const [counter, setCounter] = useState(0);
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setCount(prevCount => prevCount + 1);
+        setCounter(initVal => initVal + 1);
     }, 1000);
-
-    // cleanup function to clear interval when component unmounts
     return () => clearInterval(interval);
   }, []);
 
   useEffect(() => {
-    document.title = `Counter: ${count}`;
-  }, [count]);
-
-  return <div>Counter value: {count}</div>;
+    document.title = counter;
+  }, [counter]);
+  return <h1>{counter}</h1>
 };
 
 export default TitleUpdater;
