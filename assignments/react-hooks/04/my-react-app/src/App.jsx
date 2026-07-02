@@ -1,8 +1,11 @@
 import './App.css'
+import UseTimer from './components/useTimer'
 
 function App() {
   return (
-    <div></div>
+    <div>
+      <UseTimer />
+    </div>
   )
 }
 
