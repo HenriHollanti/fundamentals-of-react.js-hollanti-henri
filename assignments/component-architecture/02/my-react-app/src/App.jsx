@@ -3,18 +3,18 @@ import './App.css'
 import Toggle from './components/toggle'
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState("Welcome!");
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   function handleToggle() {
-    if (isLoggedIn === "Welcome!") {
-      setIsLoggedIn("Please sign in.");
+    if (isLoggedIn === true) {
+      setIsLoggedIn(false);
     } else {
-      setIsLoggedIn("Welcome!");
+      setIsLoggedIn(true);
     }
   }
   return (
     <div>
-      <h1>{isLoggedIn}</h1>
+      {isLoggedIn ? <p>Welcome!</p> : <p>Please sign in.</p>}
       <Toggle toggle={handleToggle} />
     </div>
   )
