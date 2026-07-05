@@ -19,6 +19,7 @@ function TodoList() {
         <div>
             <div>
                 <AddTask handleAdd={handleAdd} />
+                <button onClick={() => setTasks([])}>Remove tasks</button>
             </div>
             <div style={{backgroundColor: '#f7f7f7'}}>
                 <ul>
