@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import TodoItem from './TodoItem';
+import AddTask from './AddTask';
 
 function TodoList() {
     const [tasks, setTasks] = useState([]);
-    const [content, setContent] = useState("");
-    function handleAdd() {
+    
+    function handleAdd(content) {
         const newTasks = [...tasks];
         const task = { id: tasks.length, content: content }
         newTasks.push(task);
@@ -17,8 +18,7 @@ function TodoList() {
     return (
         <div>
             <div>
-                <input onChange={(event) => setContent(event.target.value)}></input>
-                <button onClick={() => handleAdd(content)}>Add task</button>
+                <AddTask handleAdd={handleAdd} />
             </div>
             <div>
                 <ul>

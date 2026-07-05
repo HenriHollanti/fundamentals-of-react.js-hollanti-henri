@@ -5,13 +5,12 @@ function TodoItem(props) {
     const [isComplete, setComplete] = useState(false);
 
     return (
-        <div className={isComplete ? styles.incomplete : styles.complete}>
+        <div className={isComplete ? styles.complete : styles.incomplete}>
             <p>{props.content}</p>
             <button onClick={() => {
                 setComplete(!isComplete);
-            }}>Remove</button>
+            }}>Completed</button>
         </div>
-        
     );
 }
 
