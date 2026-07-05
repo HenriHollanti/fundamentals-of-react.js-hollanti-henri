@@ -6,7 +6,7 @@ function TodoItem(props) {
 
     return (
         <div className={isComplete ? styles.complete : styles.incomplete}>
-            <p>{props.content}</p>
+            <p className={styles.task}>{props.content}</p>
             <button onClick={() => {
                 setComplete(!isComplete);
             }}>Completed</button>

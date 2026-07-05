@@ -20,7 +20,7 @@ function TodoList() {
             <div>
                 <AddTask handleAdd={handleAdd} />
             </div>
-            <div>
+            <div style={{backgroundColor: '#f7f7f7'}}>
                 <ul>
                     {tasks.map((task) => (
                     <li key={task.id} style={{listStyleType: 'none'}}><TodoItem content={task.content}/></li>

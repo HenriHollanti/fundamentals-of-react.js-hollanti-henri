@@ -6,3 +6,8 @@
 .complete {
     text-decoration: line-through;
 }
+
+.task {
+    display: inline;
+    margin: 2px;
+}
