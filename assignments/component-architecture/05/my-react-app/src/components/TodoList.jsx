@@ -10,9 +10,6 @@ function TodoList() {
         const task = { id: tasks.length, content: content }
         newTasks.push(task);
         setTasks(newTasks);
-        console.log("tasks: ", tasks);
-        console.log("tasks length", tasks.length);
-        console.log("task0: ", tasks[0]);
     }
 
     return (
