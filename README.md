@@ -1,5 +1,5 @@
 # PURPOSE
-This is a repository for my course assignment solutions for the course  
+This is a repository for my course assignment solutions for the course:  
 *Fundamentals of React.js*
 
 # LAYOUT
