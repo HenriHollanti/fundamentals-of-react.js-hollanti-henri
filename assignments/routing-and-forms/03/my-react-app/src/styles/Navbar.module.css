@@ -1,4 +1,5 @@
 .navbar {
+    display: flex;
     font-size: 2rem;
     width: 100%;
     height: 2em;
@@ -6,13 +7,22 @@
     padding: 0px;
     color: #000000;
     background-color: #badaff;
+    justify-content: space-evenly;
 }
 
-.navbar a {
-    padding: 10px 16px;
+.link {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
+    align-content: center;
 }
 
-.navbar a:visited {
+.link:hover {
+    background-color: #9bbadf;
+}
+
+.link:visited {
     color: inherit;
 }
