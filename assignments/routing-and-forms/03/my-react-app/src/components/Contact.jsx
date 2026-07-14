@@ -6,13 +6,16 @@ import styles from '../styles/Contact.module.css';
 function Contact() {
     return (
         <div className={styles.contact}>
-            <h1>Contact me</h1>
+            <header>
+                <h1>Contact me</h1>
+            </header>
             <div className={styles.container}>
                 <ul>
                     <li>
                         <a href='https://github.com/HenriHollanti' target='blank'>
                             <img src={github} alt='GitHub Invertocat Logo'/>
                         </a>
+                        <h2>github.com/HenriHollanti</h2>
                     </li>
                     <li>
                         <img src={phone} alt='Phone Icon'/>

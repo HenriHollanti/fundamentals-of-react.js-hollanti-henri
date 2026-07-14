@@ -1,0 +1,27 @@
+.container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+}
+
+.text_container p {
+    margin: 40px;
+}
+
+.technology {
+    list-style-type: none;
+}
+
+.technology li {
+    display: flex;
+    align-content: left;
+    margin: 5px;
+}

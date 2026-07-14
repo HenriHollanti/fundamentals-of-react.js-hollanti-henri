@@ -5,8 +5,8 @@
     height: 2em;
     margin: 0px;
     padding: 0px;
-    color: #000000;
-    background-color: #badaff;
+    color: #807effad;
+    background-color: #badaff70;
     justify-content: space-evenly;
 }
 
@@ -20,7 +20,7 @@
 }
 
 .link:hover {
-    background-color: #9bbadf;
+    background-color: #badaff;
 }
 
 .link:visited {
