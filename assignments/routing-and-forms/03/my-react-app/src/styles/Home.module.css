@@ -1,25 +1,33 @@
 .container {
+    height: 100vh;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .text_container {
+    background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: left;
-}
-
-.text_container {
     margin: 40px;
 }
 
 .projects {
-    padding: 40px;
+    display: flex;
+    background-color: aquamarine;
+    width: 100%;
+    flex-grow: 1;
 }
 
 .projects h3:hover {
     color:blue;
+}
+
+.game, .finchess {
+    border-style: solid;
+    flex-basis: 50%;
 }

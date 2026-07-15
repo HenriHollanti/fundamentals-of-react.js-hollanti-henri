@@ -1,6 +1,11 @@
 .container {
-    background-color: aliceblue;
+    background-color: blueviolet;
     margin-top: 50px;
+
+}
+
+.about {
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
     align-items: center;

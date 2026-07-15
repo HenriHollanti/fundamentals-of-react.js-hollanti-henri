@@ -5,11 +5,11 @@ import styles from '../styles/Contact.module.css';
 
 function Contact() {
     return (
-        <div className={styles.contact}>
+        <div className={styles.container}>
             <header>
                 <h1>Contact me</h1>
             </header>
-            <div className={styles.container}>
+            <div className={styles.contact}>
                 <ul>
                     <li>
                         <a href='https://github.com/HenriHollanti' target='blank'>
