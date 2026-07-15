@@ -1,4 +1,5 @@
 .container {
+    background-color: aliceblue;
     margin-top: 50px;
     display: flex;
     flex-direction: column;
@@ -6,17 +7,14 @@
 }
 
 .text_container {
+    background-color: antiquewhite;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: left;
 }
 
-.text_container p {
-    margin: 40px;
-}
-
-.technology {
+.technology ul{
     list-style-type: none;
 }
 

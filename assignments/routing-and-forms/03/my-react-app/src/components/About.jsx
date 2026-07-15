@@ -10,7 +10,7 @@ function About() {
                 <p>
                     My name is Henri Hollanti.
                     I am a second-year student in the Degree Programme in Business Information Systems
-                    at Tampere University of Applied Sciences. <br /><br />
+                    at Tampere University of Applied Sciences.
                     In my free time I like playing Chess and Counter-Strike 2 as well as reading
                     programming related literature.
                 </p>
