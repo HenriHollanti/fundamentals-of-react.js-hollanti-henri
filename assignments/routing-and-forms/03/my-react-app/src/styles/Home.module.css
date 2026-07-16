@@ -29,8 +29,7 @@
     text-align: center;
 }
 
-.projects h3:hover {
-    /*color:blue;*/
+.link:hover {
     color:#807effad;
 }
 

@@ -20,7 +20,9 @@ function Home() {
                         <br/>
                         Created using React.js, Node.js, Express.js, PostgreSQL and Docker.
                     </p>
-                    <a href='https://github.com/HenriHollanti/finchess' target='blank'><h3>github.com/HenriHollanti/finchess</h3></a>
+                    <a href='https://github.com/HenriHollanti/finchess' target='blank'>
+                        <h3 className={styles.link}>github.com/HenriHollanti/finchess</h3>
+                    </a>
                 </div>
                 <div className={styles.game}>
                     <h3>Don't Fork It Up</h3>
@@ -29,7 +31,9 @@ function Home() {
                         <br/>
                         Created using Godot and C#.
                     </p>
-                    <a href='https://github.com/HiisiGames/GameProject' target='blank'><h3>github.com/HiisiGames/GameProject</h3></a>
+                    <a href='https://github.com/HiisiGames/GameProject' target='blank'>
+                        <h3 className={styles.link}>github.com/HiisiGames/GameProject</h3>
+                    </a>
                 </div>
             </div>
         </div>
