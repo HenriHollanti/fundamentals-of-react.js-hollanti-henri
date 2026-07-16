@@ -17,12 +17,19 @@ function Home() {
                     <h3>Finchess</h3>
                     <p>
                         A Full-Stack application to save and retrieve chess games from a database via a RESTful API and display them in a chessboard view.
+                        <br/>
+                        Created using React.js, Node.js, Express.js, PostgreSQL and Docker.
                     </p>
-                    <a href='https://github.com/HiisiGames/GameProject' target='blank'></a>
+                    <a href='https://github.com/HenriHollanti/finchess' target='blank'><h3>github.com/HenriHollanti/finchess</h3></a>
                 </div>
                 <div className={styles.game}>
                     <h3>Don't Fork It Up</h3>
-                    <a href='https://github.com/HenriHollanti/finchess' target='blank'></a>
+                    <p>
+                        A mobile 2D side-scroller racing game for Android.
+                        <br/>
+                        Created using Godot and C#.
+                    </p>
+                    <a href='https://github.com/HiisiGames/GameProject' target='blank'><h3>github.com/HiisiGames/GameProject</h3></a>
                 </div>
             </div>
         </div>

@@ -8,7 +8,6 @@
 }
 
 .text_container {
-    background-color: aqua;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,16 +17,32 @@
 
 .projects {
     display: flex;
-    background-color: aquamarine;
     width: 100%;
     flex-grow: 1;
+    justify-content: space-evenly;
+}
+
+.projects h3 {
+    width: 100%;
+    height: 2em;
+    align-content: center;
+    text-align: center;
 }
 
 .projects h3:hover {
-    color:blue;
+    /*color:blue;*/
+    color:#807effad;
 }
 
 .game, .finchess {
+    background-color: rgba(231, 244, 255, 0.397);
+    padding: 0px 20px;
     border-style: solid;
-    flex-basis: 50%;
+    border-radius: 2px;
+    flex-basis: 33%;
+    border-width: 5px;
+}
+
+a {
+    text-decoration: none;
 }
