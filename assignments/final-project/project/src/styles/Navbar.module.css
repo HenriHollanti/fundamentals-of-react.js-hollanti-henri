@@ -1,0 +1,24 @@
+.navbar {
+    display: flex;
+    background-color: rgb(245, 245, 245);
+    font-size: 1.5rem;
+    width: 100%;
+    height: 2em;
+    margin: 0px;
+    padding: 0px;
+}
+
+.link {
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    align-content: center;
+    text-align: center;
+    color: rgb(40, 46, 43);
+}
+
+.link:hover {
+    background-color: rgb(228, 228, 228);
+}

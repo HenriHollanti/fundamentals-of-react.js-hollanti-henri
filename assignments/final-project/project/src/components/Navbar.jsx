@@ -6,8 +6,9 @@ function Navbar() {
         <div>
             <nav className={styles.navbar}>
                     <Link to="/" className={styles.link}>Home</Link>
-                    <Link to="/about" className={styles.link}>About</Link>
-                    <Link to="/contact" className={styles.link}>Contact</Link>
+                    <Link to="/addcontact" className={styles.link}>Add contact</Link>
+                    <Link to="/contactlist" className={styles.link}>Contact List</Link>
+                    <Link to="/contactdetails" className={styles.link}>Contact Details</Link>
             </nav>
         </div>
     );
