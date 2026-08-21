@@ -1,12 +1,37 @@
 import { useState } from 'react';
 import styles from '../styles/ControlledForm.module.css'
 
-function handleSubmit(event) {
-    event.preventDefault();
 
-}
 
-function ControlledForm() {
+function ControlledForm(props) {
+    let uuid = 4;
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        if (fname.length === 0) {
+            props.errorMsgSetter('Error: The field "First Name" cannot be empty.');
+        } else if (lname.length === 0) {
+            props.errorMsgSetter('Error: The field "Last Name" cannot be empty.');
+        } else if (pnumber.length === 0) {
+            props.errorMsgSetter('Error: The field "Phone Number" cannot be empty.');
+        } else if (email.length === 0) {
+            props.errorMsgSetter('Error: The field "Email" cannot be empty.');
+        } else if (address.length === 0) {
+            props.errorMsgSetter('Error: The field "Address" cannot be empty.');
+        } else {
+            props.errorMsgSetter("Success");
+            const newContact = {
+                id: uuid + 1,
+                fname: fname,
+                lname: lname,
+                phone: pnumber,
+                email: email,
+                address: address
+            }
+            props.contactsSetter([...props.contacts, newContact]);
+        }
+    }
+
     const [fname, setFname] = useState("");
     const [lname, setLname] = useState("");
     const [pnumber, setPnumber] = useState("");
