@@ -1,10 +1,11 @@
 import { useState } from 'react';
 import styles from '../styles/ControlledForm.module.css'
+import { v7 as uuidv7 } from 'uuid';
+
 
 
 
 function ControlledForm(props) {
-    let uuid = 4;
 
     function handleSubmit(event) {
         event.preventDefault();
@@ -21,7 +22,7 @@ function ControlledForm(props) {
         } else {
             props.errorMsgSetter("Success");
             const newContact = {
-                id: uuid + 1,
+                id: uuidv7(),
                 fname: fname,
                 lname: lname,
                 phone: pnumber,
