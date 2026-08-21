@@ -1,0 +1,19 @@
+.contact {
+    margin-top: 50px;
+    padding: 0px;
+    background-color: aliceblue;
+}
+
+.error {
+    background-color: aqua;
+}
+
+.success {
+    background-color: rgb(0, 255, 76);
+}
+
+.alt_contact {
+    margin-top: 50px;
+    padding: 0px;
+    background-color: rgb(255, 26, 10);
+}
