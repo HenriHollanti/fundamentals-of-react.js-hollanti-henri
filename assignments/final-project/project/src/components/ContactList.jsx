@@ -6,10 +6,9 @@ function ContactList(props) {
     console.log("initial contacts: ", props.contacts);
     return (
         <div className={styles.contact_list}>
-            
             <ul>
                 {props.contacts.map((contact) => {
-                    return <li key={contact.id}><NavLink to="/contactdetails" >{contact.fname} {contact.phone}</NavLink></li>
+                    return <li ><NavLink key={contact.id} to="/contactdetails" >{contact.fname} {contact.phone}</NavLink></li>
                 })}
             </ul>
         </div>
