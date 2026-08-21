@@ -4,5 +4,15 @@
 }
 
 .contact_list ul{
+    margin: 0px;
+    padding: 0px;
     list-style-type: none;
+}
+
+.contact_list li:hover{
+    background-color: rgb(247, 251, 255);
+}
+
+.contact_list li:hover{
+    width: 100%;
 }
