@@ -1,0 +1,8 @@
+.contact_list {
+    width: 100%;
+    background-color: antiquewhite;
+}
+
+.contact_list ul{
+    list-style-type: none;
+}
