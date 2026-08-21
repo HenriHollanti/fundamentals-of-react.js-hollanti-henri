@@ -1,6 +1,6 @@
 function Error(props) {
     return (
-        <div>
+        <div className={props.className}>
             <p>{props.message}</p>
         </div>
     )

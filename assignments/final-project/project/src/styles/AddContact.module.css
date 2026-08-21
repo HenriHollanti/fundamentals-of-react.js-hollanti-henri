@@ -5,11 +5,13 @@
 }
 
 .error {
-    background-color: aqua;
+    background-color: rgb(255, 0, 0);
+    color: aliceblue;
 }
 
-.success {
+.success{
     background-color: rgb(0, 255, 76);
+    color: black;
 }
 
 .alt_contact {

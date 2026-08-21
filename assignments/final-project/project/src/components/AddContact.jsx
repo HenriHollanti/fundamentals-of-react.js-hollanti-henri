@@ -17,8 +17,8 @@ function AddContact() {
     }
 
     return (
-        <div className={styles.contact} style={{backgroundColor: '#ffffff'}}>
-            <Error message={msg} className={isVisible ? styles.contact : styles.alt_contact}/>
+        <div className={styles.contact}>
+            <Error message={msg} className={isVisible? styles.error : styles.success}/>
             <ControlledForm/>
             <button onClick={() => {
                 setVisible(!isVisible);
