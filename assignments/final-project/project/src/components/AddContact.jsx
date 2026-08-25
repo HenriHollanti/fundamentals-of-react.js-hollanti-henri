@@ -6,25 +6,25 @@ import { useState } from 'react';
 function AddContact(props) {
     const [isVisible, setVisible] = useState(false);
     const [msg, setMsg] = useState("Error");
-    const altMsg = "Success";
 
-    function handleMsg() {
-        if (msg === 'Error') {
-            setMsg(altMsg);
+    function handleError(inputMsg) {
+        if (inputMsg != 'Success') {
+            if (!isVisible) {
+                setVisible(!isVisible);
+            }
+            
         } else {
-            setMsg('Error');
+            if (isVisible) {
+                setVisible(!isVisible);
+            }
         }
+        setMsg(inputMsg);
     }
 
     return (
         <div className={styles.contact}>
             <Error message={msg} className={isVisible? styles.error : styles.success}/>
-            <ControlledForm contacts={props.contacts} contactsSetter={props.contactsSetter} errorMsgSetter={setMsg}/>
-            <button onClick={() => {
-                setVisible(!isVisible);
-                handleMsg();
-                console.log(isVisible);
-                }}>Test Error</button>
+            <ControlledForm contacts={props.contacts} contactsSetter={props.contactsSetter} errorHandler={handleError}/>
         </div>
     )
 }
