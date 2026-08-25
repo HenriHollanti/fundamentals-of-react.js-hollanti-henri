@@ -6,10 +6,29 @@ import AddContact from "./AddContact";
 import ContactList from "./ContactList";
 import ContactDetails from "./ContactDetails";
 import initialContacts from '../data/initialContacts';
+import NotFound from '../pages/NotFound';
 
 function Layout() {
+
+    function findContact(inputId) {
+        for (let index in contacts)
+            for (let [k, v] of Object.entries(contacts[index])) {
+                if (k === "id" && v === inputId) {
+                    return contacts[index];
+                }
+        }
+        
+    }
+
+    function handleContact(inputId) {
+        console.log("handle contact");
+        const contact = findContact(inputId);
+        setCurrentContact(contact);
+        console.log("handle contact, current contact:", contact);
+    }
+
     const [contacts, setContacts] = useState(initialContacts);
-    const [contactId, setContactId] = useState("");
+    const [currentContact, setCurrentContact] = useState(null);
     return (
         <div className='router'>
             <Router>
@@ -17,8 +36,9 @@ function Layout() {
                 <Routes>
                     <Route path="/" element={<Home/>}></Route>
                     <Route path="/addcontact" element={<AddContact contacts={contacts} contactsSetter={setContacts}/>}></Route>
-                    <Route path="/contactlist" element={<ContactList contacts={contacts} idSetter={setContactId} />}></Route>
-                    <Route path="/contactdetails/:id" element={<ContactDetails contacts={contacts} contactId={contactId} />}></Route>
+                    <Route path="/contactlist" element={<ContactList contacts={contacts} contactHandler={handleContact} />}></Route>
+                    <Route path="/contactdetails/:id" element={<ContactDetails contact={currentContact} />}></Route>
+                    <Route path="/*" element={<NotFound/>}></Route>
                 </Routes>
             </Router>
         </div>
