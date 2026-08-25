@@ -11,8 +11,7 @@ function AddContact(props) {
         if (inputMsg != 'Success') {
             if (!isVisible) {
                 setVisible(!isVisible);
-            }
-            
+            }            
         } else {
             if (isVisible) {
                 setVisible(!isVisible);
