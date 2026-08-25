@@ -10,17 +10,17 @@ function ControlledForm(props) {
     function handleSubmit(event) {
         event.preventDefault();
         if (fname.length === 0) {
-            props.errorMsgSetter('Error: The field "First Name" cannot be empty.');
+            props.errorHandler('Error: The field "First Name" cannot be empty.');
         } else if (lname.length === 0) {
-            props.errorMsgSetter('Error: The field "Last Name" cannot be empty.');
+            props.errorHandler('Error: The field "Last Name" cannot be empty.');
         } else if (pnumber.length === 0) {
-            props.errorMsgSetter('Error: The field "Phone Number" cannot be empty.');
+            props.errorHandler('Error: The field "Phone Number" cannot be empty.');
         } else if (email.length === 0) {
-            props.errorMsgSetter('Error: The field "Email" cannot be empty.');
+            props.errorHandler('Error: The field "Email" cannot be empty.');
         } else if (address.length === 0) {
-            props.errorMsgSetter('Error: The field "Address" cannot be empty.');
+            props.errorHandler('Error: The field "Address" cannot be empty.');
         } else {
-            props.errorMsgSetter("Success");
+            props.errorHandler("Success");
             const newContact = {
                 id: uuidv7(),
                 fname: fname,
