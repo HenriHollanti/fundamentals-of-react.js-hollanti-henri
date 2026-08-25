@@ -17,7 +17,6 @@ function Layout() {
                     return contacts[index];
                 }
         }
-        
     }
 
     function handleContact(inputId) {
