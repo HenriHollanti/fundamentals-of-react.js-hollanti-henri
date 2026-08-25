@@ -1,24 +1,9 @@
-import { useState, useEffect } from 'react';
+import NotFound from '../pages/NotFound';
 
 function ContactDetails(props) {
-    const [contact, setContact] = useState({});
+    const contact = props.contact;
 
-    function findContact(inputId) {
-        for (let index in props.contacts)
-            for (let [k, v] of Object.entries(props.contacts[index])) {
-                if (k === "id" && v === inputId) {
-                    return props.contacts[index];
-                }
-        }
-        
-    }
-
-    useEffect(() => {
-        findContact(props.contactId);
-        setContact(currentContact);
-    }, [props.contactId]); 
-
-    return (
+    return (contact == null) ? (<div><NotFound/></div>) : (
         <div>
             <ul>
                 <li>{contact.id}</li>
