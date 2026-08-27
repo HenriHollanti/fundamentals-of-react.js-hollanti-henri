@@ -16,7 +16,7 @@ function ContactList(props) {
                                     <ListCell className={styles.cell} item={contact.fname}/>
                                     <ListCell className={styles.cell} item={contact.phone}/>
                                     <button>edit</button>
-                                    <button>delete</button>
+                                    <button onClick={() => props.deleteContact(contact.id)}>delete</button>
                                  </ListRow>
                             </Link>
                         </li>)
