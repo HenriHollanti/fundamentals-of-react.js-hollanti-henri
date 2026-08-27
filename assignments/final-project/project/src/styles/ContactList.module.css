@@ -1,23 +1,26 @@
 .contact_list {
     width: 100%;
-    background-color: antiquewhite;
+    display: flex;
+    justify-content: center;
 }
 
 .contact_list ul {
+    background-color: rgb(209, 209, 209);
+    width: 50%;
     margin: 0px;
     padding: 0px;
     list-style-type: none;
+    overflow-y: scroll;
+    height: 50vh;
 }
 
 .contact_list a{
     width: 100%;
-    display: block;
     text-decoration-line: none;
     color: rgb(22, 22, 22);
 }
 
-.contact_list li{
-    
+.contact_list li {
     width: 100%;
 }
 
@@ -25,3 +28,17 @@
     background-color: rgb(247, 251, 255);
 }
 
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+
+.cell {
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    background-color: rgba(137, 43, 226, 0.137);
+    border-style: dotted;
+}
