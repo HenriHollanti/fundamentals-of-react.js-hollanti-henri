@@ -6,12 +6,12 @@ function ContactDetails(props) {
     return (contact == null) ? (<div><NotFound/></div>) : (
         <div>
             <ul>
-                <li>{contact.id}</li>
-                <li>{contact.fname}</li>
-                <li>{contact.lname}</li>
-                <li>{contact.phone}</li>
-                <li>{contact.email}</li>
-                <li>{contact.address}</li>
+                <li><h2>ID: </h2>{contact.id}</li>
+                <li><h2>First name: </h2>{contact.fname}</li>
+                <li><h2>Last name: </h2>{contact.lname}</li>
+                <li><h2>Phone number: </h2>{contact.phone}</li>
+                <li><h2>Email address: </h2>{contact.email}</li>
+                <li><h2>Address: </h2>{contact.address}</li>
             </ul>
         </div>
     )
