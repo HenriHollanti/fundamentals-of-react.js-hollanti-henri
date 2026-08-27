@@ -1,5 +1,7 @@
 import styles from '../styles/ContactList.module.css';
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
+import ListCell from './ListCell';
+import ListRow from './ListRow';
 
 function ContactList(props) {
 
@@ -7,7 +9,17 @@ function ContactList(props) {
         <div className={styles.contact_list}>
             <ul>
                 {props.contacts.map((contact) => {
-                    return <li key={contact.id}><NavLink to={"/contactdetails/" + contact.id} onClick={() => props.contactHandler(contact.id)}>{contact.fname} {contact.phone}</NavLink></li>
+                    return (
+                        <li key={contact.id}>
+                            <Link to={"/contactdetails/" + contact.id} onClick={() => props.contactHandler(contact.id)}>
+                                <ListRow className={styles.row}>
+                                    <ListCell className={styles.cell} item={contact.fname}/>
+                                    <ListCell className={styles.cell} item={contact.phone}/>
+                                    <button>edit</button>
+                                    <button>delete</button>
+                                 </ListRow>
+                            </Link>
+                        </li>)
                 })}
             </ul>
         </div>
