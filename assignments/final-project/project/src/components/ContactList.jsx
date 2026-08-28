@@ -11,27 +11,28 @@ function ContactList(props) {
 
     return (
         <div className={styles.contact_list}>
-            <div className={styles.container}></div>
-            <Modal visible={isVisible}></Modal>
-            <ul>
-                {props.contacts.map((contact) => {
-                    return (
-                        <li key={contact.id}>
-                                <ListRow className={styles.row}>
-                                    <Link to={"/contactdetails/" + contact.id} onClick={() => props.contactHandler(contact.id)}>
-                                        <ListCell className={styles.cell} item={contact.fname}/>
-                                    </Link>
-                                    <ListCell className={styles.cell} item={contact.phone}/>
-                                    <button onClick={() => {
-                                        props.editContact(contact.id);
-                                        setVisible(!isVisible);
-                                        }}>edit</button>
-                                    <button onClick={() => props.deleteContact(contact.id)}>delete</button>
-                                 </ListRow>
-                            
-                        </li>)
-                })}
-            </ul>
+            <div className={styles.container}>
+                <Modal visible={isVisible}></Modal>
+                <ul>
+                    {props.contacts.map((contact) => {
+                        return (
+                            <li key={contact.id}>
+                                    <ListRow className={styles.row}>
+                                        <Link to={"/contactdetails/" + contact.id} onClick={() => props.contactHandler(contact.id)}>
+                                            <ListCell className={styles.cell} item={contact.fname}/>
+                                        </Link>
+                                        <ListCell className={styles.cell} item={contact.phone}/>
+                                        <button onClick={() => {
+                                            props.editContact(contact.id);
+                                            setVisible(!isVisible);
+                                            }}>edit</button>
+                                        <button onClick={() => props.deleteContact(contact.id)}>delete</button>
+                                    </ListRow>
+                                
+                            </li>)
+                    })}
+                </ul>
+            </div>
         </div>
     )
 }
