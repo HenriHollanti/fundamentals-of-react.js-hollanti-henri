@@ -23,7 +23,7 @@ function AddContact(props) {
     return (
         <div className={styles.contact}>
             <Error message={msg} className={isVisible? styles.error : styles.success}/>
-            <ControlledForm contacts={props.contacts} contactsSetter={props.contactsSetter} errorHandler={handleError}/>
+            <ControlledForm buttonText='Add contact' contacts={props.contacts} contactsSetter={props.contactsSetter} errorHandler={handleError}/>
         </div>
     )
 }
