@@ -36,6 +36,10 @@ function Layout() {
         setContacts(newContacts);
     }
 
+    function editContact(inputId) {
+        console.log("hello");
+    }
+
     const [contacts, setContacts] = useState(initialContacts);
     const [currentContact, setCurrentContact] = useState(null);
     return (
@@ -45,7 +49,13 @@ function Layout() {
                 <Routes>
                     <Route path="/" element={<Home/>}></Route>
                     <Route path="/addcontact" element={<AddContact contacts={contacts} contactsSetter={setContacts}/>}></Route>
-                    <Route path="/contactlist" element={<ContactList contacts={contacts} deleteContact={deleteContact} contactHandler={handleContact} />}></Route>
+                    <Route path="/contactlist" element={
+                            <ContactList
+                                contacts={contacts} deleteContact={deleteContact} contactHandler={handleContact}
+                                editContact={editContact}
+                            />
+                        }>
+                    </Route>
                     <Route path="/contactdetails/:id" element={<ContactDetails contact={currentContact} />}></Route>
                     <Route path="/*" element={<NotFound/>}></Route>
                 </Routes>
