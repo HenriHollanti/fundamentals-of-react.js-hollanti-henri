@@ -61,7 +61,7 @@ function ControlledForm(props) {
                 <label>Address:</label>
                 <input id='address' onChange={(e) => setAddress(e.target.value)}></input>
             </div>
-            <button type='submit'>Add Contact</button>
+            <button type='submit'>{props.buttonText}</button>
         </form>
     )
 }
