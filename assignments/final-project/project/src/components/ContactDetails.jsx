@@ -1,10 +1,11 @@
 import NotFound from '../pages/NotFound';
+import styles from '../styles/ContactDetails.module.css';
 
 function ContactDetails(props) {
     const contact = props.contact;
 
     return (contact == null) ? (<div><NotFound/></div>) : (
-        <div>
+        <div className={styles.details}>
             <ul>
                 <li><h2>ID: </h2>{contact.id}</li>
                 <li><h2>First name: </h2>{contact.fname}</li>
