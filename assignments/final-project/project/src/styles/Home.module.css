@@ -1,4 +1,11 @@
 .content {
     text-align: left;
-    padding: 200px;
+    padding: 100px 200px;
+}
+
+.content main {
+    border-width: 1px;
+    border-style: solid;
+    overflow-y: scroll;
+    height: 600px;
 }
