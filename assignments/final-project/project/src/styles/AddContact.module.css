@@ -29,3 +29,11 @@
     padding: 0px;
     background-color: rgb(255, 26, 10);
 }
+
+.modal {
+    visibility: visible;
+}
+
+.alt_modal {
+    visibility: hidden;
+}
