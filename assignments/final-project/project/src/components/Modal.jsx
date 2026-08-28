@@ -23,7 +23,7 @@ function Modal(props) {
     return (
         <div className={props.visible? styles.modal : styles.alt_modal}>
             <Error message={msg} className={isVisible? styles.error : styles.success}/>
-            <ControlledForm contacts={props.contacts} contactsSetter={props.contactsSetter} errorHandler={handleError}/>
+            <ControlledForm buttonText='Edit contact'contacts={props.contacts} contactsSetter={props.contactsSetter} errorHandler={handleError}/>
         </div>
     )
 }
