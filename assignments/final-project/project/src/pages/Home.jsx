@@ -1,6 +1,8 @@
+import styles from '../styles/Home.module.css'
+
 function Home() {
     return (
-        <div>
+        <div className={styles.content}>
             <h1>The Home view:</h1>
             <p>
                 Contains only div- and p-elements. The first Route in the Layout component routes to the Home view.
@@ -30,7 +32,7 @@ function Home() {
             <h1>The ContactDetails view:</h1>
             <p>
                 Displays the properties of a single contact-object passed to the component as a prop. The ContactDetails component
-                utilizes conditional rendering via a ternary operator. If the prop-contact is null, the NotFound-component is returned.
+                utilizes conditional rendering via a ternary operator. If the prop-contact is null, a NotFound-component is returned.
                 Otherwise, the properties of the contacts are dislayed in an unordered list, each property having its own li-element.
             </p>
         </div>
