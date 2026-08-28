@@ -20,10 +20,8 @@ function Layout() {
     }
 
     function handleContact(inputId) {
-        console.log("handle contact");
         const contact = findContact(inputId);
         setCurrentContact(contact);
-        console.log("handle contact, current contact:", contact);
     }
 
     function deleteContact(inputId) {
@@ -36,8 +34,15 @@ function Layout() {
         setContacts(newContacts);
     }
 
-    function editContact(inputId) {
-        console.log("hello");
+    function editContact(inputId, newContact) {
+        const newContacts = [];
+        contacts.forEach((element) => {
+            if (element.id != inputId) {
+                newContacts.push(element);
+            }
+        });
+        newContact.push(newContact);
+        setContacts(newContacts);
     }
 
     const [contacts, setContacts] = useState(initialContacts);
@@ -52,7 +57,7 @@ function Layout() {
                     <Route path="/contactlist" element={
                             <ContactList
                                 contacts={contacts} deleteContact={deleteContact} contactHandler={handleContact}
-                                editContact={editContact}
+                                editContact={editContact} contactsSetter={setContacts}
                             />
                         }>
                     </Route>
