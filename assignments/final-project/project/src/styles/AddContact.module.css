@@ -6,6 +6,10 @@
     background-color: aliceblue;
 }
 
+.contact form button:hover {
+    background-color: rgb(9, 126, 230);
+}
+
 
 .error {
     display: flex;
