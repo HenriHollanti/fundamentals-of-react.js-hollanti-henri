@@ -11,38 +11,64 @@ import NotFound from '../pages/NotFound';
 function Layout() {
 
     function findContact(inputId) {
-        for (let index in contacts)
-            for (let [k, v] of Object.entries(contacts[index])) {
-                if (k === "id" && v === inputId) {
-                    return contacts[index];
+        try {
+            for (let index in contacts) {
+                for (let [k, v] of Object.entries(contacts[index])) {
+                    if (k === "id" && v === inputId) {
+                        return contacts[index];
+                    }
                 }
+            }
+        }
+        catch (e) {
+            console.error(e);
         }
     }
 
     function handleContact(inputId) {
-        const contact = findContact(inputId);
-        setCurrentContact(contact);
+        try {
+            const contact = findContact(inputId);
+            if (contact) {
+                console.log("contact is truthy in handleContact()");
+                setCurrentContact(contact);
+            }
+        } catch (e) {
+            console.error(e);
+        }
+        
     }
 
     function deleteContact(inputId) {
-        const newContacts = [];
-        contacts.forEach((element) => {
-            if (element.id != inputId) {
-                newContacts.push(element);
-            }
-        });
-        setContacts(newContacts);
+        try {
+            const newContacts = [];
+            contacts.forEach((element) => {
+                if (element.id != inputId) {
+                    newContacts.push(element);
+                }
+            });
+            setContacts(newContacts);
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     function editContact(inputId, newContact) {
-        const newContacts = [];
-        contacts.forEach((element) => {
-            if (element.id != inputId) {
-                newContacts.push(element);
+        try {
+            const newContacts = [];
+            contacts.forEach((element) => {
+                if (element.id != inputId) {
+                    newContacts.push(element);
+                }
+            });
+            if (newContact) {
+                console.log("newContact is truthy");
+                newContact.push(newContact);
             }
-        });
-        newContact.push(newContact);
-        setContacts(newContacts);
+            console.log("before setContacts() in editContact");
+            setContacts(newContacts);
+        } catch (e) {
+            console.error(e);
+        }
     }
 
     const [contacts, setContacts] = useState(initialContacts);
