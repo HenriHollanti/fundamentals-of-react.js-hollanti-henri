@@ -1,7 +1,3 @@
-html {
-  overflow-y: scroll;
-}
-
 .body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0px;
@@ -11,5 +7,7 @@ html {
 }
 
 .router {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }
