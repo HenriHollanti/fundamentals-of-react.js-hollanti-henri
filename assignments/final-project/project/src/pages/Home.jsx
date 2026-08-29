@@ -15,7 +15,7 @@ function Home() {
                     ControlledForm-component, the state variable and state setter are passed as props from the Layout-component.
                     The setter is then used to update the state variable with 
                     the previous contents of the contacts array spread into a new array, with the new contact added to it.
-                    The view is styled with a CSS module.
+                    The view is styled with a CSS-module.
                 </p>
                 <h1>The ContactList view:</h1>
                 <p>
@@ -32,9 +32,7 @@ function Home() {
                 </p>
                 <h1>The ContactDetails view:</h1>
                 <p>
-                    Displays the properties of a single contact-object passed to the component as a prop. The ContactDetails component
-                    utilizes conditional rendering via a ternary operator. If the prop-contact is null, a NotFound-component is returned.
-                    Otherwise, the properties of the contacts are dislayed in an unordered list, each property having its own li-element.
+                    Displays the properties of a single contact-object passed to the component as a prop. The properties of the contacts are dislayed in an unordered list, each property having its own li-element.
                 </p>
             </main>
         </div>
