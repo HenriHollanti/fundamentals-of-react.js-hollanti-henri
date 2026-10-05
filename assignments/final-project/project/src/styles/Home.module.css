@@ -3,22 +3,21 @@
     flex-direction: column;
     background-color: rgb(255, 255, 255);
     text-align: left;
-    padding: 100px 100px;
+    padding: 50px 50px;
+    overflow-y: scroll;
     flex: 1;
 }
 
 .content main {
     padding: 0px 20px;
-    border-width: 1px;
-    border-style: solid;
-    overflow-y: scroll;
-    height: 600px;
 }
 
-.content main h1 {
+.content h2 {
     color: rgb(20, 20, 20);
+    margin-top: 5px;
+    margin-bottom: 15px;
 }
 
-.content main p {
+.content p {
     color: rgb(12, 12, 12);
 }
