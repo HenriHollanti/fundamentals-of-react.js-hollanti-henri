@@ -1,7 +1,7 @@
 .content {
     display: flex;
     flex-direction: column;
-    background-color: rgb(228, 242, 255);
+    background-color: rgb(255, 255, 255);
     text-align: left;
     padding: 100px 100px;
     flex: 1;
@@ -9,9 +9,16 @@
 
 .content main {
     padding: 0px 20px;
-    background-color: rgb(246, 248, 250);
     border-width: 1px;
     border-style: solid;
     overflow-y: scroll;
     height: 600px;
+}
+
+.content main h1 {
+    color: rgb(20, 20, 20);
+}
+
+.content main p {
+    color: rgb(12, 12, 12);
 }
