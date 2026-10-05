@@ -1,5 +1,6 @@
 import ControlledForm from "./ControlledForm";
-import styles from '../styles/AddContact.module.css'
+import modalStyles from '../styles/ContactList.module.css'
+import errorStyles from '../styles/AddContact.module.css'
 import Error from "./Error";
 import { useState } from 'react';
 
@@ -21,9 +22,13 @@ function Modal(props) {
     }
 
     return (
-        <div className={props.visible? styles.modal : styles.alt_modal}>
-            <Error message={msg} className={isVisible? styles.error : styles.success}/>
-            <ControlledForm buttonText='Edit contact'contacts={props.contacts} contactsSetter={props.contactsSetter} errorHandler={handleError}/>
+        <div className={props.visible? modalStyles.modal : modalStyles.alt_modal}>
+            <Error message={msg} className={isVisible? errorStyles.error : errorStyles.success}/>
+            <div>
+                <button onClick={() => props.handleClose()}>X</button>
+                <p>Current contact: {props.contact.fname} {props.contact.phone}</p>
+                <ControlledForm buttonText='Edit contact'contacts={props.contacts} contactsSetter={props.contactsSetter} errorHandler={handleError}/>
+            </div>
         </div>
     )
 }
