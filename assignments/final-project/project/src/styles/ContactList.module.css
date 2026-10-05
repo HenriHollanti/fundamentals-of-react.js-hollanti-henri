@@ -1,7 +1,6 @@
 .contact_list {
     width: 100%;
     padding: 0px;
-    background-color: rgb(255, 225, 225);
 }
 
 .container {
@@ -57,16 +56,22 @@
 }
 
 .modal {
+    position: relative;
     background-color: rgb(212, 247, 253);
     visibility: visible;
 }
 
 .alt_modal {
+    position: relative;
     background-color: rgb(212, 247, 253);
     visibility: hidden;
 }
 
 .button {
-    position: relative;
+    position: absolute;
+    min-height: 40px;
+    min-width: 40px;
+    right: 10px;
+    top: 10px;
 }
 
