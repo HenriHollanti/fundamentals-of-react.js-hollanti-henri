@@ -1,12 +1,11 @@
 .contact_list {
-    margin-top: 100px;
     width: 100%;
-    display: flex;
-    justify-content: center;
+    padding: 0px;
+    background-color: rgb(255, 225, 225);
 }
 
 .container {
-    width: 50%;
+    width: 100%;
     height: 50vh;
 }
 
@@ -30,7 +29,6 @@
 
 .contact_list li {
     width: 100%;
-    
 }
 
 .cell:hover{
@@ -54,10 +52,21 @@
     background-color: rgb(148, 174, 230);
 }
 
-.contact_list form {
-    background-color: rgb(212, 247, 253);
-}
-
 .contact_list form button:hover {
     background-color: rgb(9, 126, 230);
 }
+
+.modal {
+    background-color: rgb(212, 247, 253);
+    visibility: visible;
+}
+
+.alt_modal {
+    background-color: rgb(212, 247, 253);
+    visibility: hidden;
+}
+
+.button {
+    position: relative;
+}
+
