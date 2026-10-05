@@ -2,9 +2,6 @@
     margin-top: 50px;
     padding: 0px;
 }
-.contact form {
-    background-color: aliceblue;
-}
 
 .contact form button:hover {
     background-color: rgb(9, 126, 230);
@@ -32,12 +29,4 @@
     margin-top: 50px;
     padding: 0px;
     background-color: rgb(255, 26, 10);
-}
-
-.modal {
-    visibility: visible;
-}
-
-.alt_modal {
-    visibility: hidden;
 }
