@@ -7,31 +7,43 @@ import Modal from './Modal';
 
 function ContactList(props) {
 
-    const [isVisible, setVisible] = useState(true);
+    const [isVisible, setVisible] = useState(false);
+    const [currentContact, setCurrentContact] = useState({});
+
+    function handleEdit(inputContact) {
+        setCurrentContact(inputContact);
+    }
+
+    function handleClose() {
+        setVisible(!isVisible);
+    }
 
     return (
         <div className={styles.contact_list}>
             <div className={styles.container}>
-                <Modal visible={isVisible}></Modal>
-                <ul>
-                    {props.contacts.map((contact) => {
-                        return (
-                            <li key={contact.id}>
-                                    <ListRow className={styles.row}>
-                                        <Link to={"/contactdetails/" + contact.id} onClick={() => props.contactHandler(contact.id)}>
-                                            <ListCell className={styles.cell} item={contact.fname}/>
-                                        </Link>
-                                        <ListCell className={styles.cell} item={contact.phone}/>
-                                        <button onClick={() => {
-                                            props.editContact(contact.id);
-                                            setVisible(!isVisible);
-                                            }}>edit</button>
-                                        <button onClick={() => props.deleteContact(contact.id)}>delete</button>
-                                    </ListRow>
-                                
-                            </li>)
-                    })}
-                </ul>
+                {!isVisible ? null : <Modal contact={currentContact} visible={isVisible} handleClose={handleClose}
+                 contacts={props.contacts} contactsSetter={props.contactsSetter}></Modal>}
+                {!isVisible && 
+                    <ul>
+                        {props.contacts.map((contact) => {
+                            return (
+                                <li key={contact.id}>
+                                        <ListRow className={styles.row}>
+                                            <Link to={"/contactdetails/" + contact.id} onClick={() => props.contactHandler(contact.id)}>
+                                                <ListCell className={styles.cell} item={contact.fname}/>
+                                            </Link>
+                                            <ListCell className={styles.cell} item={contact.phone}/>
+                                            <button onClick={() => {
+                                                handleEdit(contact)
+                                                setVisible(!isVisible);
+                                                }}>edit</button>
+                                            <button onClick={() => props.deleteContact(contact.id)}>delete</button>
+                                        </ListRow>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                }
             </div>
         </div>
     )
