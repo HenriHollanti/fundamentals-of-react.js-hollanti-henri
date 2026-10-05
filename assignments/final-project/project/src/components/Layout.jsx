@@ -11,7 +11,6 @@ import NotFound from '../pages/NotFound';
 function Layout() {
 
     function findContact(inputId) {
-        try {
             for (let index in contacts) {
                 for (let [k, v] of Object.entries(contacts[index])) {
                     if (k === "id" && v === inputId) {
@@ -19,27 +18,17 @@ function Layout() {
                     }
                 }
             }
-        }
-        catch (e) {
-            console.error(e);
-        }
     }
 
     function handleContact(inputId) {
-        try {
             const contact = findContact(inputId);
             if (contact) {
                 console.log("contact is truthy in handleContact()");
                 setCurrentContact(contact);
             }
-        } catch (e) {
-            console.error(e);
-        }
-        
     }
 
     function deleteContact(inputId) {
-        try {
             const newContacts = [];
             contacts.forEach((element) => {
                 if (element.id != inputId) {
@@ -47,13 +36,9 @@ function Layout() {
                 }
             });
             setContacts(newContacts);
-        } catch (e) {
-            console.error(e);
-        }
     }
 
     function editContact(inputId, newContact) {
-        try {
             const newContacts = [];
             contacts.forEach((element) => {
                 if (element.id != inputId) {
@@ -66,9 +51,6 @@ function Layout() {
             }
             console.log("before setContacts() in editContact");
             setContacts(newContacts);
-        } catch (e) {
-            console.error(e);
-        }
     }
 
     const [contacts, setContacts] = useState(initialContacts);
