@@ -25,7 +25,7 @@ function Modal(props) {
         <div className={props.visible? modalStyles.modal : modalStyles.alt_modal}>
             <Error message={msg} className={isVisible? errorStyles.error : errorStyles.success}/>
             <div>
-                <button onClick={() => props.handleClose()}>X</button>
+                <button className={modalStyles.button} onClick={() => props.handleClose()}>X</button>
                 <p>Current contact: {props.contact.fname} {props.contact.phone}</p>
                 <ControlledForm buttonText='Edit contact'contacts={props.contacts} contactsSetter={props.contactsSetter} errorHandler={handleError}/>
             </div>
