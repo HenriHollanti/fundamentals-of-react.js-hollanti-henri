@@ -29,7 +29,8 @@ function Modal(props) {
                     <button className={modalStyles.button} onClick={() => props.handleClose()}>X</button>
                     <p>Editing contact: {props.contact.fname} {props.contact.phone}</p>
                 </div>
-                <ControlledForm buttonText='Edit contact'contacts={props.contacts} contactsSetter={props.contactsSetter} errorHandler={handleError}/>
+                <ControlledForm buttonText='Edit contact'contacts={props.contacts} contactsSetter={props.contactsSetter}
+                errorHandler={handleError} editContact={props.editContact} id={props.contact.id}/>
             </div>
         </div>
     )
