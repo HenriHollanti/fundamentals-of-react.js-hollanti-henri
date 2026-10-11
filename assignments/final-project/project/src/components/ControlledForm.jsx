@@ -29,7 +29,11 @@ function ControlledForm(props) {
                 email: email,
                 address: address
             }
-            props.contactsSetter([...props.contacts, newContact]);
+            if (props.editContact) {
+                props.editContact(props.id, newContact)
+            } else {
+                props.contactsSetter([...props.contacts, newContact]);
+            }
         }
     }
 
