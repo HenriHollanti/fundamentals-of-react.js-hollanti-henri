@@ -20,10 +20,10 @@ function Layout() {
             }
     }
 
-    function handleContact(inputId) {
+    function handleCurrent(inputId) {
             const contact = findContact(inputId);
             if (contact) {
-                console.log("contact is truthy in handleContact()");
+                //console.log("contact is truthy in handleCurrent()");
                 setCurrentContact(contact);
             }
     }
@@ -46,10 +46,10 @@ function Layout() {
                 }
             });
             if (newContact) {
-                console.log("newContact is truthy");
-                newContact.push(newContact);
+                //console.log("newContact is truthy");
+                newContacts.push(newContact);
             }
-            console.log("before setContacts() in editContact");
+            //console.log("before setContacts() in editContact");
             setContacts(newContacts);
     }
 
@@ -64,7 +64,7 @@ function Layout() {
                     <Route path="/addcontact" element={<AddContact contacts={contacts} contactsSetter={setContacts}/>}></Route>
                     <Route path="/contactlist" element={
                             <ContactList
-                                contacts={contacts} deleteContact={deleteContact} contactHandler={handleContact}
+                                contacts={contacts} deleteContact={deleteContact} contactHandler={handleCurrent}
                                 editContact={editContact} contactsSetter={setContacts}
                             />
                         }>
