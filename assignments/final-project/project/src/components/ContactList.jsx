@@ -10,7 +10,7 @@ function ContactList(props) {
     const [isVisible, setVisible] = useState(false);
     const [currentContact, setCurrentContact] = useState({});
 
-    function handleEdit(inputContact) {
+    function handleCurrent(inputContact) {
         setCurrentContact(inputContact);
     }
 
@@ -22,7 +22,7 @@ function ContactList(props) {
         <div className={styles.contact_list}>
             <div className={styles.container}>
                 {!isVisible ? null : <Modal contact={currentContact} visible={isVisible} handleClose={handleClose}
-                 contacts={props.contacts} contactsSetter={props.contactsSetter}></Modal>}
+                 contacts={props.contacts} contactsSetter={props.contactsSetter} editContact={props.editContact}></Modal>}
                 {!isVisible && 
                     <ul>
                         {props.contacts.map((contact) => {
@@ -34,7 +34,7 @@ function ContactList(props) {
                                             </Link>
                                             <ListCell className={styles.cell} item={contact.phone}/>
                                             <button onClick={() => {
-                                                handleEdit(contact)
+                                                handleCurrent(contact)
                                                 setVisible(!isVisible);
                                                 }}>edit</button>
                                             <button onClick={() => props.deleteContact(contact.id)}>delete</button>
